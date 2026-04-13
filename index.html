@@ -1,24 +1,132 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>reolon.me</title>
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #000; /* fond noir */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reolon.me</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: #0a0a0a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+      color: #fff;
+      padding: 2rem;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 480px;
+      width: 100%;
+    }
+
+    .monogram {
+      width: 72px;
+      height: 72px;
+      border: 1.5px solid rgba(255,255,255,0.15);
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 2rem;
+      font-size: 26px;
+      font-weight: 300;
+      letter-spacing: 2px;
+      color: rgba(255,255,255,0.9);
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 300;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .tagline {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 3rem;
+    }
+
+    .divider {
+      width: 32px;
+      height: 1px;
+      background: rgba(255,255,255,0.15);
+      margin: 0 auto 3rem;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .link-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      text-decoration: none;
+      color: rgba(255,255,255,0.75);
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+      background: rgba(255,255,255,0.02);
+    }
+
+    .link-btn:hover {
+      border-color: rgba(255,255,255,0.3);
+      color: #fff;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .link-btn .arrow {
+      font-size: 16px;
+      opacity: 0.4;
+    }
+
+    .footer {
+      margin-top: 4rem;
+      font-size: 11px;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,0.18);
+      text-transform: uppercase;
+    }
+  </style>
 </head>
 <body>
-    <!-- Correction : src au lieu de href -->
-    <img src="https://www.chiens-de-france.com/photo/eleveurs/182/36218/album/d375946b-4bfd-6084-1d74-685685d2a480_min.jpg" alt="Photo Reolon"/>
+  <div class="container">
+    <div class="monogram">R</div>
+    <h1>Reolon</h1>
+    <p class="tagline">Personal space</p>
+    <div class="divider"></div>
+    <div class="links">
+      <a class="link-btn" href="/index.html">
+        <span>Accueil</span>
+        <span class="arrow">→</span>
+      </a>
+      <a class="link-btn" href="/fichiers.html">
+        <span>Fichiers</span>
+        <span class="arrow">→</span>
+      </a>
+      <a class="link-btn" href="mailto:contact@reolon.me">
+        <span>Contact</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+    <p class="footer">reolon.me</p>
+  </div>
 </body>
 </html>
